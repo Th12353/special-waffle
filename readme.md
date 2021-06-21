@@ -1,2 +1,3 @@
-<h1 align="center">Special-Waffle project.</h1>
-## 🚀 Links.
+<h1 align="center">special-waffle 🚀</h1>
+
+> Just some `lua-u` scripts for Roblox.
