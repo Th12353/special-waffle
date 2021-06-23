@@ -1151,7 +1151,7 @@ library.newtoggle = function(info)
 	buttonframe.Size = udim2.snew(0,12,0,12,info.section)
 	buttonframe.Position = udim2.pnew(0.1,-(buttonframe.Size.x/2+1),0,y,info.section)
 	if info.def == true then
-		buttonframe.Color = Color3.fromRGB(45, 45, 45)
+		buttonframe.Color = maincolor
 	else
 		buttonframe.Color = Color3.fromRGB(20, 20, 20)
 	end
@@ -1214,7 +1214,7 @@ library.newslider = function(info)
 	local slide = instance.new("Frame")
 	slide.Size = udim2.snew(0,0,1,0,buttonframe)
 	slide.Position = udim2.pnew(0,0,0,0,buttonframe)
-	slide.Color = Color3.fromRGB(35, 35, 35)
+	slide.Color = maincolor or Color3.fromRGB(35, 35, 35)
 	slide.Visible = open
 	--
 	border1.Size = udim2.snew(1,6,1,6,buttonframe)
