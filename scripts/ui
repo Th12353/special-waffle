@@ -1002,6 +1002,7 @@ library.newtab = function(info)
 	local border = instance.new("Frame")
 	border.Color = Color3.fromRGB(0, 0, 0)
 	local text = instance.new("TextLabel")
+	text.TextColor3 = mainclr
 	text.Text = info.name
 	text.Size = 12
 	text.Center = true
