@@ -899,7 +899,7 @@ library.openui = function()
 end
 --
 library.new = function(info)
-	getgenv().mainclr = info.mainclr or Color3.fromRGB(255, 255, 255)
+    maincolor = info.maincolor
 	mousedisable = info.mousedisable
 	font = info.font
 	-- mainframe border
@@ -974,7 +974,7 @@ library.new = function(info)
 	label.Text = info.name
 	label.Size = 12
 	label.Position = udim2.pnew(0,5,0.5,-(label.TextBounds.Y/2),topbar)
-	label.Color = info.titlecolor or Color3.fromRGB(255,255,255)
+	label.Color = info.maincolor or Color3.fromRGB(255,255,255)
 	local borders = {
 		mainui = {
 			border1 = border1,
@@ -1002,8 +1002,8 @@ library.newtab = function(info)
 	local border = instance.new("Frame")
 	border.Color = Color3.fromRGB(0, 0, 0)
 	local text = instance.new("TextLabel")
-	text.TextColor3 = mainclr
 	text.Text = info.name
+	text.Color = maincolor
 	text.Size = 12
 	text.Center = true
 	--
@@ -1061,6 +1061,7 @@ library.newsection = function(info)
 	local label = instance.new("TextLabel")
 	label.Text = info.name
 	label.Size = 12
+	label.Color = maincolor
 	label.Center = true
 	label.Visible = false
 	label.Position = udim2.pnew(0.5,0,0,-(label.TextBounds.Y/2),border2)
@@ -1111,8 +1112,8 @@ library.newbutton = function(info)
 	--
 	local label = instance.new("TextLabel")
 	label.Text = info.name
-	label.TextColor3 = Color3.fromRGB(mainclr)
 	label.Size = 12
+	label.Color = maincolor
 	label.Center = true
 	label.Visible = false
 	label.Position = udim2.pnew(0.5,0,0.5,-(label.TextBounds.Y/2)-1,buttonframe)
@@ -1167,7 +1168,7 @@ library.newtoggle = function(info)
 	--
 	local label = instance.new("TextLabel")
 	label.Text = info.name
-	label.Color = info.textcolor or Color3.fromRGB(255,255,255)
+	label.Color = info.textcolor or maincolor
 	label.Size = 12
 	label.Visible = false
 	label.Position = udim2.pnew(1,7,0.5,-(label.TextBounds.Y/2)-1,buttonframe)
@@ -1227,7 +1228,6 @@ library.newslider = function(info)
 	--
 	local label = instance.new("TextLabel")
 	label.Text = info.name
-	label.TextColor3 = Color3.fromRGB(mainclr)
 	label.Size = 12
 	label.Center = false
 	label.Visible = false
@@ -1293,8 +1293,8 @@ library.newtextbox = function(info)
 	local label = instance.new("TextLabel")
 	label.Text = info.name
 	label.Size = 12
+	label.Color = maincolor
 	label.Center = true
-	label.TextColor3 = Color3.fromRGB(mainclr)
 	label.Visible = false
 	label.Position = udim2.pnew(0.5,0,0.5,-(label.TextBounds.Y/2)-1,buttonframe)
 	--
@@ -1345,14 +1345,14 @@ library.newkeybind = function(info)
 	local label = instance.new("TextLabel")
 	label.Text = info.name
 	label.Size = 12
-	label.TextColor3 = Color3.fromRGB(mainclr)
+	label.Color = maincolor
 	label.Visible = open
 	label.Position = udim2.pnew(-5.3,0,0.5,-(label.TextBounds.Y/2)-1,buttonframe)
 	--
 	local value = instance.new("TextLabel")
 	value.Text = info.def or "E"
 	value.Size = 12
-	value.TextColor3 = Color3.fromRGB(mainclr)
+	value.Color = maincolor
 	value.Visible = open
 	value.Center = true
 	value.Position = udim2.pnew(0.5,0,0.5,-(value.TextBounds.Y/2)-1,buttonframe)
@@ -1403,7 +1403,7 @@ library.newdropdown = function(info)
 	local label = instance.new("TextLabel")
 	label.Text = info.name
 	label.Size = 12
-	label.TextColor3 = Color3.fromRGB(mainclr)
+	label.Color = maincolor
 	label.Center = true
 	label.Visible = open
 	label.Position = udim2.pnew(0.5,0,0.5,-(label.TextBounds.Y/2)-1,buttonframe)
@@ -1470,7 +1470,7 @@ library.newcolorpicker = function(info)
 	local label = instance.new("TextLabel")
 	label.Text = info.name
 	label.Size = 12
-	label.TextColor3 = Color3.fromRGB(mainclr)
+	label.Color = maincolor
 	label.Visible = open
 	label.Position = udim2.pnew(-5.3,0,0.5,-(label.TextBounds.Y/2)-1,buttonframe)
 	--
@@ -2321,5 +2321,4 @@ rs.RenderStepped:Connect(function()
 	end
 end)
 
---
 return library
