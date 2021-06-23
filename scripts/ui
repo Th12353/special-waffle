@@ -1228,6 +1228,7 @@ library.newslider = function(info)
 	--
 	local label = instance.new("TextLabel")
 	label.Text = info.name
+	label.Color = maincolor
 	label.Size = 12
 	label.Center = false
 	label.Visible = false
@@ -1469,8 +1470,8 @@ library.newcolorpicker = function(info)
 	--
 	local label = instance.new("TextLabel")
 	label.Text = info.name
-	label.Size = 12
 	label.Color = maincolor
+	label.Size = 12
 	label.Visible = open
 	label.Position = udim2.pnew(-5.3,0,0.5,-(label.TextBounds.Y/2)-1,buttonframe)
 	--
