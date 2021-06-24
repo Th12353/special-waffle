@@ -1675,7 +1675,7 @@ uis.InputBegan:Connect(function(input)
 					textboxin = true
 					v.label.Text = ""
 					currenttextbox = v
-					v.button.Color = maincolor
+					v.button.Color = Color3.fromRGB(35, 35, 35)
 				end
 			end
 		end
