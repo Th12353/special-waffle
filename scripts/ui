@@ -1919,7 +1919,7 @@ end)
 uis.InputEnded:Connect(function(input)
 	if input.UserInputType.Name == 'MouseButton1' and sliderhold then
 		sliderhold = false
-		holdingslider.slider.Color = Color3.fromRGB(35, 35, 35)
+		holdingslider.slider.Color = maincolor
 		if holdingslider.ended then
 			holdingslider.callback(holdingslider.label2.Text)
 		end
