@@ -1617,7 +1617,7 @@ uis.InputBegan:Connect(function(input)
 					else
 						val = true
 						v.enabled = true
-						col = Color3.fromRGB(45,45,45)
+						col = maincolor
 					end
 					v.enabled = val
 					v.callback(val)
@@ -1635,7 +1635,7 @@ uis.InputBegan:Connect(function(input)
 			if v.open and mouseOver(vals) then
 				sliderhold = true
 				holdingslider = v
-				v.slider.Color = Color3.fromRGB(45,45,45)
+				v.slider.Color = maincolor
 				local holder = holdingslider.button
 				local slide = holdingslider.slider
 				local label = holdingslider.label2
@@ -1675,7 +1675,7 @@ uis.InputBegan:Connect(function(input)
 					textboxin = true
 					v.label.Text = ""
 					currenttextbox = v
-					v.button.Color = Color3.fromRGB(35, 35, 35)
+					v.button.Color = maincolor
 				end
 			end
 		end
